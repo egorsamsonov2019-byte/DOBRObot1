@@ -1,0 +1,8 @@
+services:
+  guap-bot:
+    build: .
+    restart: always
+    env_file: .env
+    volumes:
+      - ./logs:/app/logs          # журналы: неотвеченные вопросы, оценки, обращения
+      - ./data:/app/data          # база знаний и кэш картинок

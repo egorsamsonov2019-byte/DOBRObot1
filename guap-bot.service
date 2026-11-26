@@ -1,0 +1,13 @@
+[Unit]
+Description=GUAP VK bot
+After=network-online.target
+
+[Service]
+WorkingDirectory=/opt/guap_bot
+ExecStart=/opt/guap_bot/venv/bin/python bot.py
+Restart=always
+RestartSec=5
+User=botuser
+
+[Install]
+WantedBy=multi-user.target
